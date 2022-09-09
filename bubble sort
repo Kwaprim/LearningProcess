@@ -1,0 +1,19 @@
+def sort1(s):
+    a = len(s) - 1
+    sorted = False 
+    while not sorted: 
+        sorted = True
+        for i in range(a):
+            if s[i] > s[i + 1]:
+                s[i], s[i + 1] = s[i + 1], s[i]
+                sorted = False
+        a -= 1
+    return s
+    
+   
+   def sort2(s):
+    for i in range(len(s)-1, 0, -1):
+        for j in range(i):
+            if s[j] > s[j + 1]:
+                s[j], s[j + 1] = s[j + 1], s[j]
+    return s
